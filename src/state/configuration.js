@@ -2,9 +2,10 @@ export const initValue = {
   todos: []
 };
 
-export const parsist = {
+export const persist = {
   keyName: 'data',
-  isSet: true
+  isSet: false,
+  isEnCripted:false
 };
 
 export default initValue;

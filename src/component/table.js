@@ -1,14 +1,16 @@
-import React, { useContext } from 'react';
-import { context } from '../state/context';
+import React from 'react';
 import {
   removeTodoFromState,
   changeTodoStatusFromState
 } from '../state/action';
+import useSelector from '../state/useSelector';
+import useDispatch from "../state/useDispatch"
 const Table = () => {
   const {
-    store: { todos },
-    dispatch
-  } = useContext(context);
+  todos
+  } = useSelector();
+
+  const dispatch = useDispatch()
 
   const changeStatus = params => {
     dispatch(changeTodoStatusFromState(params));
