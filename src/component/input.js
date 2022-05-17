@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react';
-import { context } from '../state/context';
 import { addTodoToState } from '../state/action';
+import useDispatch from '../state/useDispatch';
 const Input = () => {
-  const { dispatch } = useContext(context);
+  const dispatch = useDispatch();
   const [todoInput, setTodoInput] = useState('');
   const add = () => {
     if (todoInput) {
